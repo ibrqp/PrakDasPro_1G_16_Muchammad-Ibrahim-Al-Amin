@@ -7,7 +7,7 @@ public class Siakad16 {
         Scanner sc = new Scanner(System.in);
 
         String nama,nim;
-        char kelas;
+        String kelas;
         byte absen;
         double nilaiKuis, nilaiTugas, nilaiUjian, nilaiAkhir;
 
@@ -17,7 +17,7 @@ public class Siakad16 {
         System.out.print("Masukkan NIM: ");
         nim = sc.nextLine();
         System.out.print("Masukkan kelas: ");
-        kelas = sc.next().charAt(0);
+        kelas = sc.next();
         System.out.print("Masukkan nomor absen: ");
         absen = sc.nextByte();
 
@@ -28,7 +28,7 @@ public class Siakad16 {
         System.out.print("Masukkan nilai ujian: ");
         nilaiUjian = sc.nextDouble();
 
-        nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3 ;
+        Nilai-Akhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3 ;
 
         System.out.println("Nama: " +nama+ " Nim: "+ nim);
         System.out.println("Kelas: " +kelas+ " Absen: "+ absen);
