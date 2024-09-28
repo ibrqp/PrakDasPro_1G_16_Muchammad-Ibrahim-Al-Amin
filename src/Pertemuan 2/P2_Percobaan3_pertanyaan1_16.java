@@ -12,7 +12,7 @@ public class P2_Percobaan3_pertanyaan1_16 {
                         System.out.println("Kelas   : 1G");    
                         System.out.println("No Absen: 16");    
                         System.out.println("Prodi   : Teknik Informatika");    
-                        System.out.println("Alamat  : Beji, Kab. Pasuruan");    
+                        System.out.println("Alamat  : Beji, Kab. Pasuruan Jawa Timur");    
                         System.out.println("No HP   : 085784818488");    
                         System.out.println("Hobi    : Olahraga");    
                     

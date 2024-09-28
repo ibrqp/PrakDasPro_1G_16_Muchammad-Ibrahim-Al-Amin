@@ -4,5 +4,9 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
     ],
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "codesnap.boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px",
+    "codesnap.showWindowTitle": false,
+    "codesnap.containerPadding": "0em",
+    "codesnap.showLineNumbers": false
 }
