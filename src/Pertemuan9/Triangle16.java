@@ -1,7 +1,6 @@
 package Pertemuan9;
 
 import java.util.Scanner;
-
 public class Triangle16 {
 
     public static void main(String[] args) {
@@ -17,6 +16,7 @@ public class Triangle16 {
             }
             i++;
             System.out.println();
+        
         }
     }
 }
