@@ -5,21 +5,28 @@ import java.util.Scanner;
 public class ArrayRataNilai16 {
 
     public static void main(String[] args) {
-        int[] nilaiMhs = new int[10];
-        double total = 0;
-        double rata2;
-
         Scanner sc = new Scanner(System.in);
 
-        for (int i = 0; i < nilaiMhs.length; i++) {
-            System.out.print("Masukkan nilai mahasiswa ke-"+(i+1)+" : ");
-            nilaiMhs[i] = sc.nextInt();
-        }
-        for (int i = 0; i < nilaiMhs.length; i++) {
-            total += nilaiMhs[i];
-        }
-        rata2 = total/nilaiMhs.length;
-        System.out.println("Rata-rata nilai = "+rata2);
-    }
+        double total = 0;
+        double rata2, nilaiLulus = 0, nilaiTidakLulus = 0;
+        int jmlLulus = 0, jmlTidakLulus = 0;
+        int jumlah;
+        System.out.print("Masukkan jumlah mahasiswa : ");
+        jumlah = sc.nextInt();
+        int[] nilaiMhs = new int[jumlah];
 
+        for (int i = 0; i < jumlah; i++) {
+            System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + " : ");
+            nilaiMhs[i] = sc.nextInt();
+            if (nilaiMhs[i] > 70) {
+                jmlLulus++;
+                nilaiLulus += nilaiMhs[i];
+            } else {
+                jmlTidakLulus++;
+                nilaiTidakLulus += nilaiMhs[i];
+            }
+        }
+        System.out.println("Rata-rata nilai lulus = " + nilaiLulus / jmlLulus);
+        System.out.println("Rata-rata nilai tidak lulus = " + nilaiTidakLulus / jmlTidakLulus);
+    }
 }
