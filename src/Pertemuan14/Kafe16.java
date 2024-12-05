@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Kafe16 {
 
-    
+    static double diskon = 0.0;
+    static int hargaKeseluruhan = 0;
+
     public static void Menu(String namaPelanggan, boolean isMember, String kodePromo) {
-        double diskon = 0.0;
         System.out.println("Selamat datang, " + namaPelanggan + "!");
 
         if (isMember) {
@@ -29,32 +30,45 @@ public class Kafe16 {
         } else if (kodePromo == "DISKON30") {
             diskon = 0.3;
             System.out.println("\nAnda mendapatkan diskon 30%");
-
         } else {
-            System.out.println("Kode Invalid");
+            diskon = 0;
+            System.out.println("\nKode kode Diskon Invalid");
         }
     }
 
     public static int hitungTotalHarga(int pilihanMenu, int banyakItem) {
         int[] hargaItems = {15000, 20000, 22000, 12000, 10000, 18000};
 
-            int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem;
-          
-            return hargaTotal;
-
+        int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem;
+        hargaTotal -= (int) (hargaTotal * diskon);
+        hargaKeseluruhan += hargaTotal;
+        return hargaTotal;
     }
 
     public static void main(String[] args) {
-        Menu("Andi", true, "DISKON50");
-
+        Menu("Andi", true, "DISKON30");
         Scanner sc = new Scanner(System.in);
+
+        while (true) {
             System.out.print("\nMasukkan nomor menu yang ingin Anda pesan: ");
             int pilihanMenu = sc.nextInt();
             System.out.print("Masukkan jumlah item yang ingin dipesan: ");
             int banyakItem = sc.nextInt();
-
+            sc.nextLine();
             int totalHarga = hitungTotalHarga(pilihanMenu, banyakItem);
-
             System.out.println("Total harga untuk pesanan Anda: Rp" + totalHarga);
+            System.out.print("Apakah anda ingin membeli lagi? (y/n)");
+            String inputan = sc.nextLine();
+            if (inputan.equalsIgnoreCase("n")) {
+                System.out.println("\nTotal harga keseluruhan untuk pesanan Anda: Rp" + hargaKeseluruhan);
+                break;
+            } else if (inputan.equalsIgnoreCase("y")) {
+                continue;
+            } else {
+                System.out.println("\nInputan tidak masuk");
+            }
+        }
     }
+
+
 }
