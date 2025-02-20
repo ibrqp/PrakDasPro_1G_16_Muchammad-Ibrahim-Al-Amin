@@ -7,6 +7,7 @@ class Mahasiswa15 {
     String kelas;
     double ipk;
 
+    
     public Mahasiswa15(){
 
     }
