@@ -9,7 +9,6 @@ public class DosenDemo15 {
         String jenisKelaminn;
         int count = 1;
         for (int i = 0; i < arrayDosen.length; i++) {
-
             arrayDosen[i] = new Dosen15("", "", false, 0);
             System.out.println("Masukkan Data Dosen ke-" + (i + 1));
             System.out.print("Kode          : ");
@@ -19,16 +18,16 @@ public class DosenDemo15 {
             System.out.print("Jenis Kelamin : ");
             jenisKelaminn = sc.nextLine().trim();
             arrayDosen[i].jenisKelamin = jenisKelaminn.equalsIgnoreCase("Pria") || jenisKelaminn.equalsIgnoreCase("L");
-            System.out.print("usia          : ");
+            System.out.print("Usia          : ");
             arrayDosen[i].usia = sc.nextInt();
             sc.nextLine();
             System.out.println("---------------------------");
         }
-        for (Dosen15 mhs : arrayDosen) {
-            System.out.println("Data Dosen ke-"+ count);
-            mhs.cetakInfo();
-            System.out.println("----------------------------");
-            count++;
-        }
+        
+        DataDosen15.dataSemuaDosen(arrayDosen);
+        DataDosen15.jumlahDosenPerJenisKelamin(arrayDosen);
+        DataDosen15.rerataUsiaDosenPerJenisKelamin(arrayDosen);
+        DataDosen15.infoDosenPalingTua(arrayDosen);
+        DataDosen15.infoDosenPalingMuda(arrayDosen);
     }
 }
