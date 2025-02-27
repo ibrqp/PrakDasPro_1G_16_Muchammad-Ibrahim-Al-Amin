@@ -28,11 +28,7 @@ public class MahasiswaDemo15 {
 
         for (int i = 0; i < arrayOfMahasiswa15.length; i++) {
             System.out.println("Data Mahasiswa ke-" + (i + 1));
-            System.out.println("NIM   : " + arrayOfMahasiswa15[i].nim);
-            System.out.println("Nama  : " + arrayOfMahasiswa15[i].nama);
-            System.out.println("Kelas : " + arrayOfMahasiswa15[i].kelas);
-            System.out.println("ipk   : " + arrayOfMahasiswa15[i].ipk);
-            System.out.println("-----------------------------");
+            arrayOfMahasiswa15[i].cetakInfo();
         }
 
     }
