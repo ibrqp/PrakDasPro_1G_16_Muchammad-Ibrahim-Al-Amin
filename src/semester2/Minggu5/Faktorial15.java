@@ -2,9 +2,11 @@ package semester2.Minggu5;
 
 public class Faktorial15 {
     int faktorialBF(int n) {
+        int i = 1;
         int fakto = 1;
-        for (int i = 1; i <= n; i++) {
-            fakto = fakto * i;
+        while (i <= n) {
+            fakto *= i;
+            i++;
         }
         return fakto;
     }
