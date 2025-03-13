@@ -8,13 +8,14 @@ public class Pangkat15 {
         pangkat = p;
     }
 
-    int pangkatBF(int a, int n) {
+    int pangkatBF() {
         int hasil = 1;
-        for (int i = 0; i < n; i++) {
-            hasil = hasil * a;
+        for (int i = 0; i < pangkat; i++) { // Menggunakan atribut pangkat
+            hasil *= nilai; // Menggunakan atribut nilai
         }
         return hasil;
     }
+    
  
     int pangkatDC(int a, int n) {
         if (n == 1) {
