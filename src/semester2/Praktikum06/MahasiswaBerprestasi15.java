@@ -1,8 +1,13 @@
 package semester2.Praktikum06;
 
 public class MahasiswaBerprestasi15 {
-    Mahasiswa15[] listMhs = new Mahasiswa15[5];
+    Mahasiswa15[] listMhs;
     int idx;
+
+    public MahasiswaBerprestasi15(int jumlah) {
+        listMhs = new Mahasiswa15[jumlah];
+        idx = 0;
+    }
 
     void tambah(Mahasiswa15 m) {
         if (idx < listMhs.length) {
