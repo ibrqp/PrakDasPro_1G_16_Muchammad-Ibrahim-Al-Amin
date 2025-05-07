@@ -5,16 +5,17 @@ public class StackTugasMahasiswa15 {
     int top;
     int size;
 
-
+    public StackTugasMahasiswa15() {
+    }
     
     public StackTugasMahasiswa15(int size) {
-        this.stack = stack;
-        this.top = top;
-        size = -1;
+        this.size = size;
+        stack = new Mahasiswa15[size];
+        top = -1;
     }
 
     public boolean isFull(){
-        if (top == size -1) {
+        if (top == size - 1) {
             return true;
         }else{
             return false;
@@ -55,12 +56,10 @@ public class StackTugasMahasiswa15 {
         }
     }
     public void print(){
-        for (int i = 0; i <= top; i++) {
+        for (int i = top; i >= 0; i--) {
             System.out.println(stack[i].nama + "\t" + stack[i].nim+ "\t" + stack[i].kelas);
         }
         System.out.println("");
     }
-    
-
     
 }

@@ -24,7 +24,7 @@ public class MahasiswaDemo15{
                     String nama = scan.nextLine();
                     System.out.print("NIM: ");
                     String nim = scan.nextLine();
-                    System.out.print("KElas: ");
+                    System.out.print("Kelas: ");
                     String kelas = scan.nextLine();
                     Mahasiswa15 mhs = new Mahasiswa15(nim, nama, kelas);
                     stack.push(mhs);
