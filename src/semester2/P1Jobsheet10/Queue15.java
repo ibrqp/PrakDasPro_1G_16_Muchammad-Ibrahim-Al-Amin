@@ -23,7 +23,6 @@ public class Queue15 {
         }
 
     }
-
     public boolean IsFull() {
         if (size == max) {
             return true;

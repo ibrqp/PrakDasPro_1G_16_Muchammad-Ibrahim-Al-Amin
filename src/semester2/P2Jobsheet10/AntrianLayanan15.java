@@ -94,13 +94,13 @@ public class AntrianLayanan15 {
         return mhs;
     }
     public void LihatAkhir() {
-        if (IsEmpty()) {
-            System.out.println("Antrian kosong.");
-        } else {
-            System.out.println("Mahasiswa di antrian paling belakang: ");
-            System.out.println("NIM - NAMA - PRODI - KELAS");
-            data[rear].tampilkanData();
-        }
+    if (IsEmpty()) {
+        System.out.println("Antrian kosong.");
+    } else {
+        System.out.println("Mahasiswa di antrian paling belakang: ");
+        System.out.println("NIM - NAMA - PRODI - KELAS");
+        data[rear].tampilkanData();
     }
+}
 
 }
