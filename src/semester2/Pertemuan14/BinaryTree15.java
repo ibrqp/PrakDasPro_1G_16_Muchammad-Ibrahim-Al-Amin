@@ -154,6 +154,19 @@ public class BinaryTree15 {
         return true;
     }
 
+    public Node15 addRekursif(Node15 current, Mahasiswa15 mhs) {
+        if (current == null) {
+            return new Node15(mhs);
+        } else if (mhs.ipk < current.mahasiswa.ipk) {
+            current.left = addRekursif(current.left, mhs);
+        } else if (mhs.ipk > current.mahasiswa.ipk) {
+            current.right = addRekursif(current.right, mhs);
+        } else {
+            System.out.println("Duplikasi IPK tidak ditambahkan,  " + mhs.ipk);
+        }
+        return current;
+    }
 
+    
 
 }
