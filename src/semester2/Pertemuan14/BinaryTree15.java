@@ -167,6 +167,35 @@ public class BinaryTree15 {
         return current;
     }
 
-    
+    public void cariMinIPK() {
+        if (root == null) {
+            System.out.println("Tree Kosong");
+            return;
+        }
+
+        Node15 current = root;
+        while (current.left != null) {
+            current = current.left;
+        }
+
+        current.mahasiswa.tampilInformasi();
+
+    }
+
+    public void cariMaxIPK() {
+        if (root == null) {
+            System.out.println("Tree Kosong");
+            return;
+        }
+
+        Node15 current = root;
+        while (current.right != null) {
+            current = current.right;
+        }
+        System.out.println("Mahasiswa dengan IPK terkecil:");
+        current.mahasiswa.tampilInformasi();
+
+    }
+
 
 }
