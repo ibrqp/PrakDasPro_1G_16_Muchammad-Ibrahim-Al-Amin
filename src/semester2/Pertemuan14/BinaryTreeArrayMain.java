@@ -20,5 +20,10 @@ public class BinaryTreeArrayMain {
         System.out.println("Inorder Traversal Mahasiswa :");
         bta.traverseInOrder(0);
 
+        bta.add(new Mahasiswa15("244160401", "Hana", "C", 3.33));
+        bta.add(new Mahasiswa15("244160402", "Irfan", "B", 3.74));
+
+        System.out.println("\nPreOrder Traversal Mahasiswa:");
+        bta.traversePreOrder(0);
     }
 }

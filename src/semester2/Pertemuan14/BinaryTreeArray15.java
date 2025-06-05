@@ -24,5 +24,21 @@ public class BinaryTreeArray15 {
         }
     }
 
+    void traversePreOrder(int idxStart) {
+        if (idxStart <= idxLast && dataMahasiswa[idxStart] != null) {
+            dataMahasiswa[idxStart].tampilInformasi();
+            traversePreOrder(2 * idxStart + 1);
+            traversePreOrder(2 * idxStart + 2);
+        }
+    }
 
+    public void add(Mahasiswa15 data) {
+        if (idxLast >= dataMahasiswa.length - 1) {
+            System.out.println("Tree sudah penuh, tidak bisa menambahkan data lagi.");
+            return;
+        }
+
+        idxLast++;
+        dataMahasiswa[idxLast] = data;
+    }
 }
