@@ -177,7 +177,7 @@ public class BinaryTree15 {
         while (current.left != null) {
             current = current.left;
         }
-
+        System.out.println("Mahasiswa dengan IPK terkecil:");
         current.mahasiswa.tampilInformasi();
 
     }
@@ -197,5 +197,19 @@ public class BinaryTree15 {
 
     }
 
+    public void tampilMahasiswaIPKdiAtas(double batas) {
+        System.out.println("Mahasiswa dengan IPK di atas " + batas + ":");
+        tampilMahasiswaIPKdiAtas(root, batas);
+    }
+    
+    public void tampilMahasiswaIPKdiAtas(Node15 node, double batasIPK) {
+    if (node != null) {
+        tampilMahasiswaIPKdiAtas(node.left, batasIPK);
+        if (node.mahasiswa.ipk > batasIPK) {
+            node.mahasiswa.tampilInformasi();
+        }
+        tampilMahasiswaIPKdiAtas(node.right, batasIPK);
+    }
+}
 
 }
